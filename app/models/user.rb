@@ -4,7 +4,7 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :city, :state, :email, :birthday, :cpf, presence: true
   validates :cpf, :email, uniqueness: true
   validate :validate_cpf
-  validates :validate_cpf, length: { is: 11 }
+  validates :validate_cpf, length: { is: 15 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
