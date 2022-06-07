@@ -1,12 +1,44 @@
-.navbar-lewagon {
+.navbar-smart-wallet {
   justify-content: space-between;
-  background: white;
+  background: $oxford-blue;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0 1rem;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+.navbar-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 65px;
+  margin: 0 auto;
+  font-size: 24px;
+  color: white;
+  position: relative;
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  .wallet-icon {
+    font-size: 36px;
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wallet-font {
+    background-color: $ocean-green;
+    border: 5px solid #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
