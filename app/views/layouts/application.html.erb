@@ -14,8 +14,8 @@
   </head>
 
   <body>
-    <%= render 'shared/flashes' %>
     <%= yield %>
+    <%= render 'shared/flashes' %>
     <% if user_signed_in? %>
       <%= render 'shared/navbar' %>
     <% end %>
