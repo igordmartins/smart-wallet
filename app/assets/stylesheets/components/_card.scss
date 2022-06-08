@@ -1,12 +1,27 @@
 .document-grid {
   display: grid;
   width: 100%;
-  .item {
+  .grid-item {
     margin: 5px;
     width: 90%;
     text-align: center;
-    height: 500px;
+    height: 530px;
     border-radius: 10px;
     background-color: #FFF;
+    margin: 10px auto
   }
+
+
+}
+
+.document-content {
+  h1 {
+    text-align: center;
+    margin: 10px auto
+  }
+}
+
+
+.width-316 {
+  width: 316px;
 }
