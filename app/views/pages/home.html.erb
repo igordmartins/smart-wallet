@@ -7,8 +7,7 @@
       <h3><%= current_user.first_name %> <%= current_user.last_name %> :D</h3>
       <i class="fas fa-angle-down seta"></i>
     <% else %>
-      <%= link_to "Entrar", new_user_session_path, class:"btn-entrar" %>
-      <%= link_to "Cadastrar", new_user_registration_path, class:"btn-entrar" %>
+      <p class="home-text">Documentos organizados e em um só lugar!</p>
     <% end %>
   </div>
 <!--Waves Container-->
@@ -31,6 +30,10 @@
 <!--Header ends-->
 
 <!--Content starts-->
+<% if !user_signed_in? %>
+      <div class="home-buttons"><%= link_to "Entrar", new_user_session_path, class:"btn-entrar" %>
+       <%= link_to "Cadastrar", new_user_registration_path, class:"btn-entrar" %> </div>
+    <% end %>
 <div class="content flex">
   <p>Perguntas frequentes : </p>
 </div>
