@@ -1,10 +1,14 @@
 <%= simple_form_for @document do |f| %>
   <div class="form-inputs mt-4 col-md-6 offset-md-3">
-    <%= f.input :event_name, label: "Categoria do Documento" %>
-    <%= f.check_box :renewal, label: "Documento tem validade?" %>
-    <%= f.input :photo, label: "Foto do Evento", as: :file %>
-      <div class="form-actions">
-      <%= f.button :submit, 'Cadastre seu documento', class: 'mt-3 btn-registrar-navbar' %>
-      </div>
+    <%= f.input :category, collection: ['CPF', 'Identidade', 'Habilitação', 'Documento do Veículo',
+                                         'Carteira de Vacinação', 'Passaporte', 'Outros'],
+                                         label: "Categoria do Documento",
+                                         selected: 'CPF' %>
+    <%= f.input :renewal, as: :boolean, label: "Documento tem validade?" %>
+    <div class="d-none"><%= f.input :renew_date, as: :date, required: false, label: "Data de vencimento" %></div>
+    <%= f.input :photo, label: "Anexar foto do documento", as: :file %>
+    <div class="form-actions">
+      <%= f.button :submit, 'Cadastre seu documento', class: 'mt-3 btn-registrar' %>
+    </div>
   </div>
 <% end %>
