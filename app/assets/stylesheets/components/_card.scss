@@ -1,0 +1,12 @@
+.document-grid {
+  display: grid;
+  width: 100%;
+  .item {
+    margin: 5px;
+    width: 90%;
+    text-align: center;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #FFF;
+  }
+}

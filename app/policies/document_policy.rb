@@ -1,7 +1,7 @@
 class DocumentPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(available: true)
+      scope.where(user: user)
     end
   end
 
