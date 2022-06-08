@@ -2,8 +2,13 @@
     <!--Content before waves-->
   <div class="inner-header flex">
     <h1>Smart Wallet</h1>
-    <%= link_to "Entrar", new_user_session_path, class:"btn-entrar" %>
-    <%= link_to "Cadastrar", new_user_registration_path, class:"btn-entrar" %>
+    <% if user_signed_in? %>
+      <h2>Bem Vindo</h2>
+      <h3><%= current_user.first_name %> <%= current_user.last_name %> :D</h3>
+    <% else %>
+      <%= link_to "Entrar", new_user_session_path, class:"btn-entrar" %>
+      <%= link_to "Cadastrar", new_user_registration_path, class:"btn-entrar" %>
+    <% end %>
   </div>
 <!--Waves Container-->
   <div>
