@@ -70,3 +70,23 @@
     height:30vh;
   }
 }
+
+.seta {
+
+  text-align:center;
+  font-size:45px;
+  color:#fff;
+  width:50px;
+  height:50px;
+  background:transparent;
+  float:none;
+  display:block;
+  opacity:0;
+  animation:anima-seta 700ms ease infinite;
+}
+@keyframes anima-seta {
+  to {
+      opacity:1;
+      transform: translateY(18px);
+  }
+}
