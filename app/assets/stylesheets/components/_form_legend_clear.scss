@@ -8,3 +8,23 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.container-login {
+  background: rgb(255, 255, 255);
+  background-size: cover;
+  padding: 30px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: (0 -6mm 4mm rgb(158, 177, 241));
+  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+  background-position: center;
+  height: 100vh;
+}
+
+.checkbox{
+  display: flex;
+  flex: start;
+  gap: 1;
+}
+
+
