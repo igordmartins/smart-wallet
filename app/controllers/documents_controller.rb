@@ -2,7 +2,8 @@ class DocumentsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @documents = policy_scope(document).order(created_at: :desc)
+    @documents = policy_scope(Document).order(created_at: :desc)
+    @documents = Document.where(user: current_user)
     authorize @documents
   end
 
