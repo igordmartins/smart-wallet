@@ -9,7 +9,7 @@ export default class extends Controller {
       slideBy: "page",
       mouseDrag: true,
       swipeAngle: false,
-      speed: 400,
+      speed: 400
     });
   }
 }
