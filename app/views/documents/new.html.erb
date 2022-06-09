@@ -6,7 +6,8 @@
                                          selected: 'CPF' %>
     <%= f.input :renewal, as: :boolean, label: "Documento tem validade?" %>
     <div class="d-none"><%= f.input :renew_date, as: :date, required: false, label: "Data de vencimento" %></div>
-    <%= f.input :photo, label: "Anexar foto do documento", as: :file %>
+    <%= f.input :photo, label: "Anexar frente do documento", as: :file %>
+    <%= f.input :photo, label: "Anexar verso do documento", as: :file %>
     <div class="form-actions">
       <%= f.button :submit, 'Cadastre seu documento', class: 'mt-3 btn-registrar' %>
     </div>
