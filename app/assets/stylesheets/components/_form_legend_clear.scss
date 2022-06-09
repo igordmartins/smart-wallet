@@ -14,11 +14,15 @@ legend ~ div.form-check:first-of-type {
   background-size: cover;
   padding: 30px;
   margin: 0 auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  box-shadow: (0 -6mm 4mm rgb(158, 177, 241));
-  background-image: url('https://images.unsplash.com/photo-1652816437851-2eab839b89ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
-  background-position: center;
+  background-color: #042138;
+  background-image:
+      radial-gradient(at 47% 33%, hsl(206.44, 85%, 14.000000000000002%) 0, transparent 59%),
+      radial-gradient(at 82% 65%, hsl(207.07, 77%, 57.99999999999999%) 0, transparent 55%);
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
 .checkbox{
