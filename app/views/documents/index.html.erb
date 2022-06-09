@@ -1,4 +1,4 @@
-<div class="container" data-controller="slider" >
+<div class="container"  >
   <div class="document-content">
     <h1>Meus documentos</h1>
     <div class="document-grid">
@@ -15,9 +15,9 @@
                 <div class="modal-header">
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" data-controller="slider" data-slider-id-value="<%= document.id %>">
                   <div class="width-316">
-                    <div class="my-slider" >
+                    <div class="my-slider-<%= document.id %>" >
                       <div>
                         <%= cl_image_tag(document.front.key) %>
                       </div>
@@ -31,6 +31,13 @@
             </div>
           </div>
         <% end %>
+        <div class="add-wrapper">
+          <div class="add-content">
+            <%= link_to new_document_path, class:"add-button" do  %>
+              <i class="fas fa-plus"></i>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
