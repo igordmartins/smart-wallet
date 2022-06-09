@@ -7,20 +7,22 @@
   text-align: center;
   font-weight: 600;
   background-color: $ocean-green;
-  transition:  0.3s;
+  transition: 0.3s;
   &:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
 
 .home-buttons {
-background-color: #fff;
-display: flex;
-justify-content: center;
-gap: 15px;
-width: 100%;
-margin-top: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 50px;
 }
+
 
 .btn {
   background-color: $ocean-green; /* Green */
@@ -34,8 +36,9 @@ margin-top: 50px;
   width: 100%;
 }
 
+
 .btn-document {
-  background-color: #FFF;
+  background-color: rgba(130, 142, 214, 0.1);
   padding: 0 10px;
   margin: 10px;
   border-radius: 5px;
@@ -44,7 +47,7 @@ margin-top: 50px;
   height: 100px;
   color: $oxford-blue;
   border: 0px;
-  box-shadow: 0 8px 5px 0 rgba(0,0,0,0.2), 0 6px 5px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
   h4 {
     font-size: 20px;
     font-weight: 600;
@@ -54,6 +57,38 @@ margin-top: 50px;
   }
 }
 
+
+.add-wrapper {
+  position: absolute;
+}
+
+
+.add-content {
+  position: relative;
+  top: 242px;
+  right: -300px;
+
+  background-color: white;
+  border: 6px solid $oxford-blue;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .add-button {
+    color: $oxford-blue;
+
+    font-size: 28px;
+    font-weight: lighter;
+    padding: 0;
+  }
+
+  .fas {
+    line-height: 0;
+  }
+=======
 .accordion-button {
   color: $oxford-blue;
   background-color: #fff;
@@ -61,4 +96,5 @@ margin-top: 50px;
 
 .accordion-body {
   background-color: #f3f3f3;
+
 }
