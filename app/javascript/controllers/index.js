@@ -3,10 +3,6 @@
 
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
 
 const application = Application.start()
 const context = require.context("controllers", true, /_controller\.js$/)
