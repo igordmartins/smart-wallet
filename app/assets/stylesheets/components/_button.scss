@@ -47,6 +47,7 @@
   position: absolute;
 }
 
+
 .add-content {
   position: relative;
   top: 242px;
@@ -58,12 +59,13 @@
   width: 60px;
   height: 60px;
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+
   .add-button {
     color: $oxford-blue;
 
-    font-size: 32px;
+    font-size: 28px;
     font-weight: lighter;
     padding: 0;
   }
