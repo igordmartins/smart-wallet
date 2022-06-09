@@ -32,4 +32,32 @@ margin-top: 50px;
   display: inline-block;
   font-size: 16px;
   width: 100%;
+
+.btn-document {
+  background-color: #FFF;
+  padding: 0 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 40px;
+  width: 300px;
+  height: 100px;
+  color: $oxford-blue;
+  border: 0px;
+  box-shadow: 0 8px 5px 0 rgba(0,0,0,0.2), 0 6px 5px 0 rgba(0,0,0,0.19);
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: $jet;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.accordion-button{
+  color: $oxford-blue;
+  background-color: #fff;
+}
+
+.accordion-body {
+  background-color: #f3f3f3;
 }
