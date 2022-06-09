@@ -14,6 +14,10 @@
 @import "components/index";
 @import "pages/index";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
  background-color: #fff;
  margin:0;
@@ -49,4 +53,8 @@ p {
   letter-spacing: 1px;
   font-size: 14px;
   color: $gray;
+}
+
+.form-control {
+  border-radius: 30px;
 }

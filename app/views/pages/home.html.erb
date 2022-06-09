@@ -1,17 +1,17 @@
 <div class="header">
-    <!--Content before waves-->
+  <!--Content before waves-->
   <div class="inner-header flex">
     <h1>Smart Wallet</h1>
     <% if user_signed_in? %>
       <h2>Bem Vindo</h2>
       <h3><%= current_user.first_name %> <%= current_user.last_name %> :D</h3>
-      <i class="fas fa-angle-down seta"></i>
+      <a href="#faq"><i class="fas fa-angle-down seta"></i></a>
     <% else %>
       <p class="home-text">Documentos organizados e em um só lugar!</p>
-      <i class="fas fa-angle-down seta"></i>
+      <a href="#faq"><i class="fas fa-angle-down seta"></i></a>
     <% end %>
   </div>
-<!--Waves Container-->
+  <!--Waves Container-->
   <div>
     <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -29,20 +29,17 @@
   <!--Waves end-->
 </div>
 <!--Header ends-->
-
 <!--Content starts-->
 <% if !user_signed_in? %>
   <div class="home-buttons"><%= link_to "Entrar", new_user_session_path, class:"btn-entrar" %>
-  <%= link_to "Cadastrar", new_user_registration_path, class:"btn-entrar" %> </div>
+    <%= link_to "Cadastrar", new_user_registration_path, class:"btn-entrar" %> </div>
 <% end %>
-
-
-<h5 class="text-center mt-5"><strong>Perguntas Frequentes:</strong></h5>
-<div class="accordion accordion-flush my-3" id="accordionFlushExample">
+<h5 class="text-center mt-5" id="faq"><strong>Perguntas Frequentes:</strong></h5>
+<div class="accordion accordion-flush accordion-margin" id="accordionFlushExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-       Quem fez esse projeto?
+        Quem fez esse projeto?
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -69,7 +66,7 @@
       <div class="accordion-body">aaaaaaaaa</div>
     </div>
   </div>
-   <div class="accordion-item">
+  <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingFour">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
         Quantas horas demorou?
@@ -79,7 +76,7 @@
       <div class="accordion-body">pra krl</div>
     </div>
   </div>
-   <div class="accordion-item">
+  <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingFive">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
         Onde foi desenvoldio a Smart Wallet?
