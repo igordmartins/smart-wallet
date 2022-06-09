@@ -2,7 +2,7 @@
   display: inline-block;
   color: #fff;
   padding: 7px 30px;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 150px;
   text-align: center;
   font-weight: 600;
@@ -22,6 +22,16 @@ width: 100%;
 margin-top: 50px;
 }
 
+.btn {
+  background-color: $ocean-green; /* Green */
+  border-radius: 15px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
 
 .btn-document {
   background-color: #FFF;
