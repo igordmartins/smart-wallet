@@ -4,5 +4,5 @@ class Document < ApplicationRecord
   validates :category, uniqueness: true
   validates :category, inclusion: { in: ['CPF', 'Identidade', 'Habilitação', 'Documento do Veículo',
                                          'Carteira de Vacinação', 'Passaporte', 'Outros'] }
-  has_one_attached :photo
+  has_many_attachments :photos
 end
