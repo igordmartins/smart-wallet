@@ -19,12 +19,12 @@
                   <div class="my-slider-<%= document.id %> " >
                     <% if document.front.attached? %>
                       <div class="img-content">
-                        <%= cl_image_tag(document.front.key) %>
+                        <%= cl_image_tag(document.front.key, :crop=>"lfill") %>
                       </div>
                     <% end %>
                     <% if document.back.attached? %>
                       <div class="img-content">
-                        <%= cl_image_tag(document.back.key)  %>
+                        <%= cl_image_tag(document.back.key,  :crop=>"lfill")  %>
                       </div>
                     <% end %>
                   </div>
