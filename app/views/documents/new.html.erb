@@ -1,15 +1,22 @@
-<%= simple_form_for @document do |f| %>
-  <div class="form-inputs mt-4 col-md-6 offset-md-3">
-    <%= f.input :category, collection: ['CPF', 'Identidade', 'Habilitação', 'Documento do Veículo',
-                                         'Carteira de Vacinação', 'Passaporte', 'Outros'],
+<div class=" container-login col-sm-8 text-center container-new-document">
+  <div class="card-login-registro">
+    <%= simple_form_for @document do |f| %>
+      <div class="form-inputs mt-4 col-md-6 offset-md-3">
+        <%= f.input :category, collection: ['Identidade', 'Habilitação', 'Documento do Veículo',
+                                         'Carteira de Vacinação', 'Passaporte', 'Título de Eleitor', 'Outros'],
                                          label: "Categoria do Documento",
-                                         selected: 'CPF' %>
-    <%= f.input :renewal, as: :boolean, label: "Documento tem validade?" %>
-    <div class="d-none"><%= f.input :renew_date, as: :date, required: false, label: "Data de vencimento" %></div>
-    <%= f.input :front, label: "Anexar frente do documento", as: :file %>
-    <%= f.input :back, label: "Anexar verso do documento", as: :file %>
-    <div class="form-actions">
-      <%= f.button :submit, 'Cadastre seu documento', class: 'mt-3 btn-registrar' %>
-    </div>
+                                         selected: 'Identidade' %>
+        <div class="d-none">
+          <%= f.input :renewal, as: :boolean, label: "Documento tem validade?" %>
+          <%= f.input :renew_date, as: :date, required: false, label: "Data de vencimento" %>
+        </div>
+        <%= f.input :front, label: "Anexar frente do documento", as: :file %>
+        <%= f.input :back, label: "Anexar verso do documento", as: :file %>
+        <div class="form-actions">
+          <%= f.button :submit, 'Cadastre seu documento', class: 'mt-3 btn-registrar' %>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
+<script defer src="https://cdn.crop.guide/loader/l.js?c=FGSGVY"></script>
