@@ -25,14 +25,15 @@
 }
 
 
-// .width-316 {
-//   width: 316px;
-//   margin: 5px auto;
-//   border-radius: 10px;
-//   overflow: hidden;
-//   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-//   border: white 1px solid;
-// }
+.width-316 {
+  width: 316px;
+  margin: 5px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+  object-fit: fill;
+}
 
 .tns-controls {
   display: none;
@@ -85,6 +86,26 @@
   border: none;
 }
 
+.container-new-document {
+  padding-bottom: 130px;
+  select {
+    border-radius: 30px;
+  }
+}
+
+
+
+.img-content{
+  border-radius: 5px;
+  overflow: hidden;
+  img {
+    width: 400px;
+    height: 600px;
+    object-fit: contain;
+
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .card-login {
     backdrop-filter: blur(4px) saturate(180%);
@@ -104,5 +125,5 @@
     border-radius: 10px;
     border: 1px solid rgba(209, 213, 219, 0.3);
     padding: 50px 30px;
-  }
+ }
 }

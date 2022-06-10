@@ -18,3 +18,12 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+.profile-image {
+
+  img {
+  border-radius: 50%;
+  border: 2px solid $oxford-blue;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+}

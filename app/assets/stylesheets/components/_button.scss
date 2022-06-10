@@ -14,6 +14,40 @@
   }
 }
 
+.btn-sair {
+  display: inline-block;
+  color: #fff;
+  padding: 7px 30px;
+  border-radius: 10px;
+  width: 150px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #fff;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.btn-profile {
+  display: inline-block;
+  color: #fff;
+  padding: 7px 30px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  font-weight: 600;
+  background-color: $ocean-green;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+
 .home-buttons {
   background-color: #fff;
   display: flex;
@@ -36,20 +70,23 @@
 }
 
 .btn-document {
-  background-color: rgba(130, 142, 214, 0.1);
+  background-color: rgba(4, 33, 56, .9);
+  background-image:
+      radial-gradient(at 47% 33%, hsl(206.44, 85%, 14.000000000000002%) 0, transparent 59%),
+      radial-gradient(at 82% 65%, hsl(207.07, 77%, 57.99999999999999%) 0, transparent 55%);
   padding: 0 10px;
   margin: 10px;
   border-radius: 5px;
   font-size: 40px;
   width: 300px;
   height: 100px;
-  color: $oxford-blue;
+  color: #FFF;
   border: 0px;
   box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
   h4 {
     font-size: 20px;
     font-weight: 600;
-    color: $jet;
+
     margin-top: 10px;
     margin-bottom: 0;
   }
