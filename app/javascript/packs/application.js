@@ -14,4 +14,4 @@ ActiveStorage.start();
 
 import "controllers";
 import "bootstrap";
-import "../plugins/flatpickr";
+// import "../plugins/flatpickr";

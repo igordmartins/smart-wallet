@@ -7,7 +7,7 @@
     </div>
     <div class="profile-icons">
         <div class="content-icon"><i class="profile-icon fas fa-birthday-cake"></i></div>
-      <div><span class="profile-input name mt-3"><%= current_user.birthday %></span></div>
+      <div><span class="profile-input name mt-3"><%= current_user.birthday.strftime("%d/%m/%Y") %></span></div>
     </div>
     <div class="profile-icons">
       <div class="content-icon"><i class="profile-icon far fa-envelope"></i></div>

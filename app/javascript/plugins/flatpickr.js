@@ -1,4 +1,3 @@
-import flatpickr from "flatpickr";
-import "flatpickr/dist/themes/dark.css";
+// import flatpickr from "flatpickr";
 
-flatpickr(".datepicker");
+// flatpickr(".datepicker");
