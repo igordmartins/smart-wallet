@@ -1,7 +1,21 @@
-
-
-
-
-<%= link_to "Adicionar Documento", new_document_path, class:"btn-entrar" %>
-
-<%= link_to "Sair", destroy_user_session_path, method: :delete, class:"btn-entrar" %>
+<div class="profile py-4">
+  <div class="profile-image d-flex flex-column justify-content-center align-items-center">
+    <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" height="100" width="100" />
+    <div class="profile-icons mt-4">
+      <div class="content-icon"><i class="profile-icon fas fa-user"></i></div>
+      <div><span class="profile-input name mt-3"><%= current_user.first_name %> <%= current_user.last_name %></span></div>
+    </div>
+    <div class="profile-icons">
+        <div class="content-icon"><i class="profile-icon fas fa-birthday-cake"></i></div>
+      <div><span class="profile-input name mt-3"><%= current_user.birthday %></span></div>
+    </div>
+    <div class="profile-icons">
+      <div class="content-icon"><i class="profile-icon far fa-envelope"></i></div>
+      <div><span class="profile-input name mt-3"><%= current_user.email %></span></div>
+    </div>
+    <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+      <div class=" d-flex mt-5"> <%= link_to "Editar Perfil", edit_user_registration_path, class:"btn-profile" %> </div>
+    </div>
+    <%= link_to "Sair", destroy_user_session_path, method: :delete, data: { confirm: "Você quer mesmo sair da sua conta?" }, class:"btn-sair" %>
+  </div>
+</div>
