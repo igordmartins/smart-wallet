@@ -8,13 +8,13 @@
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "email" }%>
-        <%= f.input :first_name, label: "Primeiro Nome",
+        <%= f.input :first_name, label: "Nome",
                     required: true %>
-        <%= f.input :last_name, label: "Ultimo nome",
+        <%= f.input :last_name, label: "Sobrenome",
                     required: true %>
         <%= f.input :birthday, label: "Data de nascimento",
-                    as: :date,
-                    required: true %>
+                    as: :string,
+                    required: true, input_html: {class: "datepicker"} %>
         <%= f.input :cpf,
                     required: true, input_html: { data: { action: "input->mask#inputmask", mask:"cpf" }, maxlength: 14 } %>
         <%= f.input :password, label: "Senha",
@@ -26,9 +26,9 @@
                     input_html: { autocomplete: "new-password" } %>
       </div>
       <div class="form-actions">
-        <%= f.button :submit, "Registra-se" %>
+        <%= f.button :submit, "Cadastrar" %>
       </div>
     <% end %>
-    <%= render "devise/shared/links" %>
+    <%# render "devise/shared/links" %>
   </div>
 </div>
