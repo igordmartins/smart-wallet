@@ -8,10 +8,8 @@
     height: 560px;
     border-radius: 10px;
 
-    margin: 10px auto
+    margin: 10px auto;
   }
-
-
 }
 
 .document-content {
@@ -21,16 +19,14 @@
     font-size: 32px;
     color: $oxford-blue;
   }
-
 }
-
 
 .width-316 {
   width: 316px;
   margin: 5px auto;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border: white 1px solid;
   object-fit: fill;
 }
@@ -44,7 +40,6 @@
   //   background-color: $ocean-green;
   //   transition: 0.3s;
   // }
-
 }
 .tns-nav {
   display: none;
@@ -57,7 +52,6 @@
     font-weight: 600;
     color: $ocean-green;
   }
-
 }
 
 .card-login {
@@ -72,7 +66,7 @@
 .card-registro {
   backdrop-filter: blur(4px) saturate(180%);
   -webkit-backdrop-filter: blur(4px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.20);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   padding: 50px 30px;
@@ -93,17 +87,22 @@
   }
 }
 
-
-
-.img-content{
+.img-content {
   border-radius: 5px;
   overflow: hidden;
+  width: 400px;
+  height: 600px;
   img {
     width: 400px;
     height: 600px;
     object-fit: contain;
-
   }
+}
+
+
+.container-index {
+  overflow: auto;
+  padding-bottom: 150px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -126,4 +125,5 @@
     border: 1px solid rgba(209, 213, 219, 0.3);
     padding: 50px 30px;
  }
+
 }
