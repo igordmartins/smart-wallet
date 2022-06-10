@@ -1,34 +1,38 @@
 <div class="container-login col-sm-8 text-center">
-  <div class="card-login-registro">
+  <div class="card-registro">
     <h2>Registre-se</h2>
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { data: { controller: "mask"}} ) do |f| %>
-      <%= f.error_notification %>
-      <div class="form-inputs">
-        <%= f.input :email,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "email" }%>
-        <%= f.input :first_name, label: "Nome",
-                    required: true %>
-        <%= f.input :last_name, label: "Sobrenome",
-                    required: true %>
-        <%= f.input :birthday, label: "Data de nascimento",
-                    as: :string,
-                    required: true, input_html: {class: "datepicker"} %>
-        <%= f.input :cpf,
-                    required: true, input_html: { data: { action: "input->mask#inputmask", mask:"cpf" }, maxlength: 14 } %>
-        <%= f.input :password, label: "Senha",
-                    required: true,
-                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation, label: "Confirme a senha",
-                    required: true,
-                    input_html: { autocomplete: "new-password" } %>
-      </div>
-      <div class="form-actions">
-        <%= f.button :submit, "Cadastrar" %>
-      </div>
-    <% end %>
-    <%# render "devise/shared/links" %>
+    <div class="form-login-registro">
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { data: { controller: "mask"}} ) do |f| %>
+        <%= f.error_notification %>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :first_name, label: "Nome",
+                      required: true %>
+          <%= f.input :last_name, label: "Sobrenome",
+                      required: true %>
+          <%= f.input :birthday, label: "Data de nascimento",
+                      as: :string,
+                      required: true, input_html: {class: "datepicker"} %>
+          <%= f.input :cpf,
+                      required: true, input_html: { data: { action: "input->mask#inputmask", mask:"cpf" }, maxlength: 14 }, label: "CPF" %>
+          <%= f.input :password, label: "Senha",
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation, label: "Confirme a senha",
+                      required: true,
+                      input_html: { autocomplete: "new-password" } %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Registre-se" %>
+        </div>
+      <% end %>
+      <div class="my-5">
+      <%= render "devise/shared/links" %>
+      <div>
+    </div>
   </div>
 </div>
