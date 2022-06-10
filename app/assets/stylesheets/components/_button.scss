@@ -14,6 +14,40 @@
   }
 }
 
+.btn-sair {
+  display: inline-block;
+  color: #fff;
+  padding: 7px 30px;
+  border-radius: 10px;
+  width: 150px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #fff;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.btn-profile {
+  display: inline-block;
+  color: #fff;
+  padding: 7px 30px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  font-weight: 600;
+  background-color: $ocean-green;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+
 .home-buttons {
   background-color: #fff;
   display: flex;
