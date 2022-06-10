@@ -17,12 +17,12 @@
                 </div>
                 <div class="modal-body" data-controller="slider" data-slider-id-value="<%= document.id %>">
                   <div class="my-slider-<%= document.id %> " >
-
+                    <% if document.front.attached? %>
                       <div class="img-content">
                         <%= cl_image_tag(document.front.key) %>
                       </div>
-
-                    <% if document.back.key? %>
+                    <% end %>
+                    <% if document.back.attached? %>
                       <div class="img-content">
                         <%= cl_image_tag(document.back.key)  %>
                       </div>
