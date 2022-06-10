@@ -17,7 +17,7 @@
                 </div>
                 <div class="modal-body" data-controller="slider" data-slider-id-value="<%= document.id %>">
                   <div class="my-slider-<%= document.id %> " >
-                    <% if document.back.key? %>
+                    <% if document.front.key? %>
                       <div class="img-content">
                         <%= cl_image_tag(document.front.key) %>
                       </div>
