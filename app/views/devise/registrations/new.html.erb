@@ -20,19 +20,15 @@
                       required: false, input_html: { data: { action: "input->mask#inputmask", mask:"cpf" }, maxlength: 14 }, label: "CPF", placeholder: "939.433.502-15"%>
           <%= f.input :password, label: "Senha", placeholder: "•••••••",
                       required: false,
-                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :password_confirmation, label: "Confirme a senha", placeholder: "•••••••",
                       required: false,
                       input_html: { autocomplete: "new-password" } %>
         </div>
-        <div class="form-actions">
+        <div class="form-actions mt-4">
           <%= f.button :submit, "Registre-se" %>
         </div>
       <% end %>
-      <div class="my-5">
-      <%= render "devise/shared/links" %>
-      <div>
     </div>
   </div>
 </div>
