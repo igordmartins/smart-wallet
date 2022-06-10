@@ -16,22 +16,18 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                 </div>
                 <div class="modal-body" data-controller="slider" data-slider-id-value="<%= document.id %>">
-
-                    <div class="my-slider-<%= document.id %> " >
+                  <div class="my-slider-<%= document.id %> " >
+                    <% if document.back.key? %>
                       <div class="img-content">
-
                         <%= cl_image_tag(document.front.key) %>
-
                       </div>
-                      <% if document.back.key? %>
-                        <div class="img-content">
-
-                          <%= cl_image_tag(document.back.key)  %>
-
-                        </div>
-                      <% end %>
-                    </div>
-
+                    <% end %>
+                    <% if document.back.key? %>
+                      <div class="img-content">
+                        <%= cl_image_tag(document.back.key)  %>
+                      </div>
+                    <% end %>
+                  </div>
                 </div>
               </div>
             </div>
