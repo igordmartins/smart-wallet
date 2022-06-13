@@ -1,5 +1,5 @@
 class DocumentsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  # skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @documents = policy_scope(Document).order(created_at: :desc)
@@ -25,20 +25,20 @@ class DocumentsController < ApplicationController
     end
   end
 
-  def edit
-    @document = Document.find(params[:id])
-    authorize @document
-  end
+  # def edit
+  #   @document = Document.find(params[:id])
+  #   authorize @document
+  # end
 
-  def update
-    @document = Document.find(params[:id])
-    authorize @document
-    if @document.update(document_params)
-      redirect_to @document, notice: 'Seu documento foi atualizado!'
-    else
-      render :edit
-    end
-  end
+  # def update
+  #   @document = Document.find(params[:id])
+  #   authorize @document
+  #   if @document.update(document_params)
+  #     redirect_to @document, notice: 'Seu documento foi atualizado!'
+  #   else
+  #     render :edit
+  #   end
+  # end
 
   def destroy
     @document = Document.find(params[:id])
@@ -47,10 +47,10 @@ class DocumentsController < ApplicationController
     authorize @document
   end
 
-  def show
-    @document = Document.find(params[:id])
-    authorize @document
-  end
+  # def show
+  #   @document = Document.find(params[:id])
+  #   authorize @document
+  # end
 
   private
 
