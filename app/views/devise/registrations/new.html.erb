@@ -16,6 +16,8 @@
           <%= f.input :birthday, label: "Data de nascimento",
                       as: :string,
                       required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :genre, collection: ['Masculino', 'Feminino'],
+                                         label: "Gênero" %>
           <%= f.input :cpf,
                       required: false, input_html: { data: { action: "input->mask#inputmask", mask:"cpf" }, maxlength: 14 }, label: "CPF", placeholder: "939.433.502-15"%>
           <%= f.input :password, label: "Senha", placeholder: "•••••••",
