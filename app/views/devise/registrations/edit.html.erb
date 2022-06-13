@@ -6,7 +6,7 @@
       <i class="fas fa-arrow-left"></i>
       <% end %>
     </div>
-
+    
     <h3>Editar Cadastro</h3>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -14,20 +14,18 @@
 
       <div class="form-inputs">
         <%= f.input :email, required: false, autofocus: true %>
+        <%= f.input :first_name, label: "Nome", placeholder: "Ninja",
+                      required: false %>
+        <%= f.input :last_name, label: "Sobrenome", placeholder: "Productions",
+                      required: false %>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
         <% end %>
 
-        <%= f.input :password,
-                    required: false, label: "Senha",
-                    input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation,
-                    required: false, label: "Confirme a senha",
-                    input_html: { autocomplete: "new-password" } %>
-        <%= f.input :current_password,
-                    required: false, label: "Nova senha",
-                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :birthday, label: "Data de nascimento",
+                      as: :string,
+                      required: false, input_html: {class: "datepicker"} %>
       </div>
 
       <div class="form-actions mt-4">
