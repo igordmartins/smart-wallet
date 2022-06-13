@@ -1,6 +1,10 @@
 <div class="profile py-4">
   <div class="profile-image d-flex flex-column justify-content-center align-items-center">
-    <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" height="100" width="100" />
+    <% if current_user.genre == "Masculino" %>
+      <%= image_tag("profile-male.png", height: 100, width: 100) %>
+    <% else %>
+      <%= image_tag("profile-female.png", height: 100, width: 100) %>
+    <% end %>
     <div class="profile-icons mt-4">
       <div class="content-icon"><i class="profile-icon fas fa-user"></i></div>
       <div><span class="profile-input name mt-3"><%= current_user.first_name %> <%= current_user.last_name %></span></div>
