@@ -1,5 +1,12 @@
 <div class="container-login col-sm-8 text-center">
   <div class="card-login">
+
+      <div class="back-button-login">
+      <%= link_to :root, class: "back-login" do %>
+      <i class="fas fa-arrow-left"></i>
+      <% end %>
+    </div>
+
     <h2>Entrar</h2>
     <div class="form-login-registro">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
