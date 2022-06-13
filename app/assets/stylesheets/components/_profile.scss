@@ -13,7 +13,7 @@
 
   .profile-icons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-column-gap: 9px;
     width: 90%;
     margin-top: 28px;
@@ -27,7 +27,6 @@
   .content-icon {
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
   }
 }
