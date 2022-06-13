@@ -1,0 +1,14 @@
+.content-trash {
+  position: relative;
+}
+
+.trash {
+  position: absolute;
+  top: -43px;
+  right: 41px;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+}
