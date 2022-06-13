@@ -1,0 +1,14 @@
+.back-button {
+  position: relative;
+}
+.back {
+  position: absolute;
+  top: -35px;
+  right: 230px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  &:hover {
+    color: white;
+  }
+}
