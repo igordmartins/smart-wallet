@@ -7,7 +7,15 @@
           <button type="button" class="btn-document" data-bs-toggle="modal" data-bs-target="#document-<%= document.id %>">
             <h4><%= document.category %></h4>
             <i class="fas fa-address-card"></i>
+            <% if document.renewal %>
+             <p>Vencimento: <%= document.renew_date.strftime("%d/%m/%Y") %></p>
+            <% end %>
           </button>
+          <div class="content-trash">
+            <%= link_to document_path(document), method: :delete, data: { confirm: "Tem certeza que deseja excluir #{document.category}?" }, class: "trash" do %>
+              <i class="fas fa-trash-alt"></i>
+            <% end %>
+          </div>
           <!-- Modal -->
           <div class="modal fade" id="document-<%= document.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
