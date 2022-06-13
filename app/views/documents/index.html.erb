@@ -7,7 +7,7 @@
           <button type="button" class="btn-document" data-bs-toggle="modal" data-bs-target="#document-<%= document.id %>">
             <h4><%= document.category %></h4>
             <i class="fas fa-address-card"></i>
-            <% if document.renewal %>
+            <% if document.renewal && document.renew_date %>
              <p>Vencimento: <%= document.renew_date.strftime("%d/%m/%Y") %></p>
             <% end %>
           </button>
