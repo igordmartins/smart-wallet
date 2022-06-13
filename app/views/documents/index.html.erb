@@ -11,7 +11,10 @@
              <p>Vencimento: <%= document.renew_date.strftime("%d/%m/%Y") %></p>
             <% end %>
           </button>
-          <div class="content-trash">
+          <div class="content-trash-edit">
+            <%= link_to edit_document_path(document), class: "edit" do %>
+              <i class="fas fa-edit"></i>
+            <% end %>
             <%= link_to document_path(document), method: :delete, data: { confirm: "Tem certeza que deseja excluir #{document.category}?" }, class: "trash" do %>
               <i class="fas fa-trash-alt"></i>
             <% end %>

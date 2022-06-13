@@ -1,0 +1,25 @@
+<div class=" container-login col-sm-8 text-center container-new-document">
+  <div class="card-login">
+    <%= simple_form_for @document do |f| %>
+      <div class="form-inputs mt-4 col-md-6 offset-md-3" data-controller="renewal datepicker">
+        <%= f.input :category, collection: ['Identidade', 'Habilitação', 'Documento do Veículo',
+                                         'Carteira de Vacinação', 'Passaporte', 'Título de Eleitor', 'Outros'],
+                                         label: "Categoria do Documento" %>
+        <%= f.input :renewal, as: :boolean, label: "Documento tem validade?", input_html: { data: { action: "change->renewal#showRenewalDate" } } %>
+        <% if @document.renewal %>
+          <%= f.input :renew_date, as: :string, required: false, label: "Data de vencimento", input_html: { class: "datepicker" } %>
+        <% else %>
+          <div class="d-none" data-renewal-target="renewalDate" >
+            <%= f.input :renew_date, as: :string, required: false, label: "Data de vencimento", input_html: { class: "datepicker" } %>
+          </div>
+        <% end %>
+        <%= f.input :front, label: "Anexar frente do documento", as: :file %>
+        <%= f.input :back, label: "Anexar verso do documento", as: :file %>
+        <div class="form-actions">
+          <%= f.button :submit, 'Salvar alteração', class: 'mt-3 btn-registrar' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<script defer src="https://cdn.crop.guide/loader/l.js?c=FGSGVY"></script>

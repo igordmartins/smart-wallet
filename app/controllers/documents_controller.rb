@@ -34,7 +34,7 @@ class DocumentsController < ApplicationController
     @document = Document.find(params[:id])
     authorize @document
     if @document.update(document_params)
-      redirect_to @document, notice: 'Seu documento foi atualizado!'
+      redirect_to documents_path, notice: 'Seu documento foi atualizado!'
     else
       render :edit
     end

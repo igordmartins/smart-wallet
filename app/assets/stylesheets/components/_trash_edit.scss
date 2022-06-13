@@ -1,4 +1,4 @@
-.content-trash {
+.content-trash-edit {
   position: relative;
 }
 
@@ -6,6 +6,17 @@
   position: absolute;
   top: -43px;
   right: 41px;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+}
+
+.edit {
+  position: absolute;
+  top: -110px;
+  right: 38px;
   color: white;
   text-decoration: none;
   &:hover {
