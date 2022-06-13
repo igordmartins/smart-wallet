@@ -1,32 +1,23 @@
-.profile {
-  background-color: $ocean-blue;
-  height: 100vh;
-  hr {
-    border: 1px solid #fff;
-    width: 100%;
-    opacity: 1.0;
-  }
-  .profile-input {
-    color: #fff;
-    font-weight: bold;
-  }
+.card-perfil {
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 50px 30px;
+  margin-top: -20px;
+}
 
-  .profile-icons {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-column-gap: 9px;
-    width: 90%;
-    margin-top: 28px;
-    box-shadow: 0 0 0;
-  }
-  .profile-icon {
-    color: #fff;
-    font-size: 20px;
-
-  }
-  .content-icon {
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
+.container-perfil {
+  background: rgb(255, 255, 255);
+  background-size: cover;
+  background-color: #4096dd;
+  background-image:
+      radial-gradient(at 82% 65%, hsl(207.07, 77%, 57.99999999999999%) 0, transparent 55%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 100%;
+  padding: 100px;
 }
