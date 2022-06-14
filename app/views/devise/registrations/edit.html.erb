@@ -6,34 +6,41 @@
       <i class="fas fa-arrow-left"></i>
       <% end %>
     </div>
-    
+
     <h3>Editar Cadastro</h3>
 
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, data: { controller: "mask datepicker"}} ) do |f| %>
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :email, required: false, autofocus: true %>
-        <%= f.input :first_name, label: "Nome", placeholder: "Ninja",
+        <%= f.input :email,
+                      as: :hidden,
+                      required: false  %>
+          <%= f.input :first_name, label: "Nome", placeholder: "Ninja",
                       required: false %>
-        <%= f.input :last_name, label: "Sobrenome", placeholder: "Productions",
+          <%= f.input :last_name, label: "Sobrenome", placeholder: "Productions",
                       required: false %>
-
-        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-        <% end %>
-
-        <%= f.input :birthday, label: "Data de nascimento",
+          <%= f.input :birthday, label: "Data de nascimento",
                       as: :string,
                       required: false, input_html: {class: "datepicker"} %>
-      </div>
+          <%= f.input :genre, collection: ['Masculino', 'Feminino'],
+                      default: current_user.genre,
+                      as: :hidden %>
+          <%= f.input :cpf,
+                      required: false,
+                      as: :hidden %>
+          <%= f.input :current_password,
+                hint: "we need your current password to confirm your changes",
+                required: true,
+                input_html: { autocomplete: "current-password" } %>
+    </div>
 
       <div class="form-actions mt-4">
         <%= f.button :submit, "Atualizar" %>
       </div>
     <% end %>
 
-    <p class="mt-3"> <%= link_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <p class="mt-3"> <%= link_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Você tem certeza?" }, method: :delete %></p>
 
   </div>
 </div>
