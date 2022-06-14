@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   </head>
-
   <body>
-    <%= yield %>
-    <%= render 'shared/flashes' %>
-    <% if user_signed_in? %>
-      <%= render 'shared/navbar' %>
-    <% end %>
+    <div class="container-wrapper">
+      <%= yield %>
+      <%= render 'shared/flashes' %>
+      <% if user_signed_in? %>
+        <%= render 'shared/navbar' %>
+      <% end %>
+    </div>
   </body>
 </html>

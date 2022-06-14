@@ -1,0 +1,68 @@
+
+
+@media (min-width: 600px) {
+  .container-wrapper {
+    width: 70%;
+    margin: 0 auto;
+
+  }
+  .navbar-smart-wallet {
+    width: 70%;
+  }
+
+  .add-content {
+    right: 20%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .btn-registro {
+    width: 100% !important;
+  }
+
+  .trash {
+    right: 100px;
+  }
+}
+@media (min-width: 700px) {
+  .btn {
+    width: 50%;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .trash {
+    right: 190px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-wrapper {
+    width: 50%;
+    margin: 0 auto;
+
+
+  }
+  .navbar-smart-wallet {
+    width: 50%;
+  }
+  .add-content {
+
+    right: 27%;
+  }
+
+  .card-registro {
+    width: 90%;
+  }
+  .trash {
+    right: 198px;
+  }
+
+}
+
+@media (min-width: 1500px) {
+  .trash {
+    right: 200px;
+  }
+}

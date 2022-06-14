@@ -61,7 +61,9 @@ p {
 }
 .form-login-registro{
   .form-control {
-    width: 70vw;
+    width: 100%;
   }
-
+  select {
+    border-radius: 30px;
+  }
 }
