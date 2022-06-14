@@ -8,7 +8,13 @@
             <h4><%= document.category %></h4>
             <i class="fas fa-address-card"></i>
             <% if document.renewal && document.renew_date %>
-             <p>Vencimento: <%= document.renew_date.strftime("%d/%m/%Y") %></p>
+              <% if document.renew_in_days < 0 %>
+                <p class= "text-danger"><strong>DOCUMENTO VENCIDO DIA: <%= document.renew_date.strftime("%d/%m/%Y") %></strong></p>
+              <% elsif document.renew_in_days < 90 %>
+                <p>Vence em: <span class="text-warning"><%= document.renew_in_days %> dias</span></p>
+              <% else %>
+                <p>Vence em: <span class="text-success"><%= document.renew_in_days %> dias</span></p>
+              <% end %>
             <% end %>
           </button>
           <div class="content-trash">
