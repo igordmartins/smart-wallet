@@ -23,6 +23,9 @@ legend ~ div.form-check:first-of-type {
   width: 100%;
   padding: 50px;
   height: 100vh;
+  select {
+    border-radius: 30px;
+  }
 }
 
 .checkbox{
@@ -44,4 +47,10 @@ legend ~ div.form-check:first-of-type {
   color: #fff;
   width: 100%;
   padding: 50px;
+}
+
+
+.form-check {
+  display: flex !important;
+  justify-content: space-evenly !important;
 }
