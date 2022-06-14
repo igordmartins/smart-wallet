@@ -4,6 +4,7 @@
   .container-wrapper {
     width: 70%;
     margin: 0 auto;
+    min-height: 800px;
 
   }
   .navbar-smart-wallet {
@@ -28,7 +29,9 @@
   .btn {
     width: 50%;
   }
-
+  .card-perfil {
+    width: 80%;
+  }
 }
 
 @media (min-width: 1000px) {
