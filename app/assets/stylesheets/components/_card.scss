@@ -103,6 +103,19 @@
   padding-bottom: 150px;
 }
 
+.no-document-message {
+  width: 100%;
+  border-radius: 10px;
+  background-color: $platinum;
+  margin: 0 auto;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  h3 {
+    color: $oxford-blue;
+    font-size: 20px;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .card-login {
     backdrop-filter: blur(4px) saturate(180%);
