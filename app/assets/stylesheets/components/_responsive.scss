@@ -21,9 +21,7 @@
     width: 100% !important;
   }
 
-  .trash {
-    right: 100px;
-  }
+
 }
 @media (min-width: 700px) {
   .btn {
@@ -34,11 +32,7 @@
   }
 }
 
-@media (min-width: 1000px) {
-  .trash {
-    right: 190px;
-  }
-}
+
 
 @media (min-width: 1200px) {
   .container-wrapper {
@@ -58,19 +52,6 @@
   .card-registro {
     width: 90%;
   }
-  .trash {
-    right: 198px;
-  }
 
-}
 
-@media (min-width: 1500px) {
-  .trash {
-    right: 200px;
-  }
-}
-@media (min-width: 2500px) {
-  .trash {
-    right: 425px;
-  }
 }
