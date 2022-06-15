@@ -132,3 +132,24 @@
 .accordion-body {
   background-color: #f3f3f3;
 }
+
+
+.add-content-new {
+  margin: 50px auto;
+
+  border: 3px solid $ocean-green;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .add-button {
+    color: $ocean-green;
+
+    font-size: 56px;
+
+    padding: 0;
+  }
+}
