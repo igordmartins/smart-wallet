@@ -1,7 +1,7 @@
 <div class=" container-login col-sm-8 text-center container-new-document">
   <div class="card-login">
     <%= simple_form_for @document do |f| %>
-      <div class="form-inputs mt-4 col-md-6 offset-md-3" data-controller="renewal datepicker">
+      <div class="form-inputs mt-4 col-12" data-controller="renewal datepicker">
         <%= f.input :category, collection: ['Identidade', 'Habilitação', 'Documento do Veículo',
                                          'Carteira de Vacinação', 'Passaporte', 'Título de Eleitor', 'Outros'],
                                          label: "Categoria do Documento",
