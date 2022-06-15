@@ -1,57 +1,68 @@
 <div class="container container-index"  >
   <div class="document-content">
-      <h1>Meus documentos</h1>
+    <h1>Meus documentos</h1>
     <div class="document-grid">
       <div class="grid-item">
-        <% @documents.each do |document| %>
-          <button type="button" class="btn-document" data-bs-toggle="modal" data-bs-target="#document-<%= document.id %>">
-            <h4><%= document.category %></h4>
-            <i class="fas fa-address-card"></i>
-            <% if document.renewal && document.renew_date %>
-              <% if document.renew_in_days < 0 %>
-                <p class= "text-danger"><strong>DOCUMENTO VENCIDO DIA: <%= document.renew_date.strftime("%d/%m/%Y") %></strong></p>
-              <% elsif document.renew_in_days < 90 %>
-                <p>Vence em: <span class="text-warning"><%= document.renew_in_days %> dias</span></p>
-              <% else %>
-                <p>Vence em: <span class="text-success"><%= document.renew_in_days %> dias</span></p>
+        <% if @documents.length != 0 %>
+          <% @documents.each do |document| %>
+            <button type="button" class="btn-document" data-bs-toggle="modal" data-bs-target="#document-<%= document.id %>">
+              <h4><%= document.category %></h4>
+              <i class="fas fa-address-card"></i>
+              <% if document.renewal && document.renew_date %>
+                <% if document.renew_in_days < 0 %>
+                  <p class= "text-danger"><strong>DOCUMENTO VENCIDO DIA: <%= document.renew_date.strftime("%d/%m/%Y") %></strong></p>
+                <% elsif document.renew_in_days < 90 %>
+                  <p>Vence em: <span class="text-warning"><%= document.renew_in_days %> dias</span></p>
+                <% else %>
+                  <p>Vence em: <span class="text-success"><%= document.renew_in_days %> dias</span></p>
+                <% end %>
               <% end %>
-            <% end %>
-          </button>
-          <div class="content-trash">
-            <%= link_to document_path(document), method: :delete, data: { confirm: "Tem certeza que deseja excluir #{document.category}?" }, class: "trash" do %>
-              <i class="fas fa-trash-alt"></i>
-            <% end %>
-          </div>
-          <!-- Modal -->
-          <div class="modal fade" id="document-<%= document.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
-                </div>
-                <div class="modal-body" data-controller="slider" data-slider-id-value="<%= document.id %>">
-                  <div class="my-slider-<%= document.id %> " >
-                    <% if document.front.attached? %>
-                      <div class="img-content">
-                        <%= cl_image_tag(document.front.key, :crop=>"lfill") %>
-                      </div>
-                    <% end %>
-                    <% if document.back.attached? %>
-                      <div class="img-content">
-                        <%= cl_image_tag(document.back.key,  :crop=>"lfill")  %>
-                      </div>
-                    <% end %>
+            </button>
+            <div class="content-trash">
+              <%= link_to document_path(document), method: :delete, data: { confirm: "Tem certeza que deseja excluir #{document.category}?" }, class: "trash" do %>
+                <i class="fas fa-trash-alt"></i>
+              <% end %>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="document-<%= document.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                  </div>
+                  <div class="modal-body" data-controller="slider" data-slider-id-value="<%= document.id %>">
+                    <div class="my-slider-<%= document.id %> " >
+                      <% if document.front.attached? %>
+                        <div class="img-content">
+                          <%= cl_image_tag(document.front.key, :crop=>"lfill") %>
+                        </div>
+                      <% end %>
+                      <% if document.back.attached? %>
+                        <div class="img-content">
+                          <%= cl_image_tag(document.back.key,  :crop=>"lfill")  %>
+                        </div>
+                      <% end %>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="add-content">
+              <%= link_to new_document_path, class:"add-button" do  %>
+                <i class="fas fa-plus"></i>
+              <% end %>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="no-document-message">
+            <h3>Você ainda não possui nenhum documento cadastrado.😢</h3>
+          </div>
+          <div class="add-content-new">
+            <%= link_to new_document_path, class:"add-button" do  %>
+              <i class="fas fa-plus"></i>
+            <% end %>
           </div>
         <% end %>
-        <div class="add-content">
-          <%= link_to new_document_path, class:"add-button" do  %>
-            <i class="fas fa-plus"></i>
-          <% end %>
-        </div>
       </div>
     </div>
   </div>
